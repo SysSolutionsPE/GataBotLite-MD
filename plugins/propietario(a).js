@@ -132,10 +132,10 @@ break
 case isCommand7:
 try {  
 if (global.conn.user.jid == conn.user.jid) {
-let stdout = execSync('git pull' + (m.fromMe && text ? ' ' + text : ''))
+let stdout = execSync('git pull' + (m.fromMe && text ? ' ' + text : 'Actualizando'))
 await conn.reply(m.chat, stdout.toString(), m)}
 } catch {
-var update = execSync('git remote set-url origin' + md + '.git && git pull')
+var update = execSync('git remote set-url origin' + md + 'https://github.com/GataNina-Li/GataBotLite-MD.git && git pull')
 await m.reply(update.toString())
 }        
 break
